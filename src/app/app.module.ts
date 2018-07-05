@@ -10,6 +10,7 @@ import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 import { UsersComponent } from './users/users.component';
 import { PostsComponent } from './posts/posts.component';
 import { DetailsComponent } from './details/details.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailsComponent } from './details/details.component';
     LeftSidebarComponent,
     UsersComponent,
     PostsComponent,
-    DetailsComponent
+    DetailsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
