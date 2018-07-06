@@ -2,6 +2,9 @@
   <h1>
   Users
 </h1>
+<div *ngIf="flag == true; then truthyTemplate else falsyTemplate"></div>
+
+<ng-template #truthyTemplate>
 <ul [@listStagger] = "users">
   <li *ngFor="let user of users">
     <a routerLink='/details/{{user.id}}'>{{user.name}}</a>
@@ -14,4 +17,14 @@
     </ul>
   </li>
 </ul>
+</ng-template>
+
+<ng-template #falsyTemplate>
+  <ul [@listStagger] = "simplearr">
+     <li *ngFor="let arr of simplearr">
+        <span> {{arr}} </span>
+     </li>
+  </ul>
+</ng-template>
+
 </div>

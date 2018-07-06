@@ -35,6 +35,8 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
 })
 export class UsersComponent implements OnInit {
   users : Object[];
+  simplearr = [];
+  flag : boolean;
 
   constructor(private data: DataService) { }
 
@@ -42,6 +44,9 @@ export class UsersComponent implements OnInit {
     this.data.getUsers().subscribe(
         data => this.users = data
     );
+
+    this.simplearr = ['apple', 'mango', 'pineapple', 'banana'];
+    this.flag = true;
   }
 
 }

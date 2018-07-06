@@ -5,13 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
- simplearray = [] ;
+ 
 
   constructor( private http: HttpClient) { }
 
-  getSimpleArray() {
-    return this.simplearray = ['apple', 'mango', 'pineapple', 'banana'];
-  }
+  // getSimpleArray() {
+  //   return  ['apple', 'mango', 'pineapple', 'banana'];
+  // }
 
   getUsers() {
     return this.http.get<Object[]>('https://jsonplaceholder.typicode.com/users')
