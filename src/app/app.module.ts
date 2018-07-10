@@ -17,6 +17,8 @@ import { MyAccessiblePipesComponent } from './my-accessible-pipes/my-accessible-
 import { Demo1Pipe } from './demo1.pipe';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { MyAccessibleDirectivesComponent } from './my-accessible-directives/my-accessible-directives.component';
+import { ShadowDirective } from './shadow.directive';
+import { FancyDirective } from './fancy.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { MyAccessibleDirectivesComponent } from './my-accessible-directives/my-a
     Demo1Pipe,
     ExponentialStrengthPipe,
     MyAccessibleDirectivesComponent,
+    ShadowDirective,
+    FancyDirective,
   ],
   imports: [
     BrowserModule,

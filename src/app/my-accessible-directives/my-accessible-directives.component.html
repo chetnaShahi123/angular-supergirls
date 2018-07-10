@@ -1,3 +1,14 @@
-<p>
-  my-accessible-directives works!
-</p>
+<div class="directives">
+    <h2 class="heading">Dumb directive</h2>
+    <span appShadow>Alligator</span>
+</div>
+
+<div class="directives">
+  <h2 class="heading">Providing Box-shadow to the element</h2>
+  <p [appShadow]= "'hotpink'" [appShadowX]="'12px'" [appShadowY]="'6px'" [appShadowBlur]="'30px'">hello! I am Demo</p>
+</div>
+
+<div class="directives">
+    <h2 class="heading">Providing Color of element</h2>
+    <p appFancy>hello! I am color Demo</p>
+</div>
