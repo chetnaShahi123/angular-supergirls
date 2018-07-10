@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Observable } from 'rxjs';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';  commented as havn't used any bootstrap speific sytling in users component
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';  //commented as havn't used any bootstrap speific sytling in users component
 
 @Component({
   selector: 'app-users',
@@ -37,6 +37,9 @@ export class UsersComponent implements OnInit {
   users : Object[];
   simplearr = [];
   flag : boolean;
+  birthday : Date;
+  currency : number;
+  decide = [];
 
   constructor(private data: DataService) { }
 
@@ -47,6 +50,9 @@ export class UsersComponent implements OnInit {
 
     this.simplearr = ['apple', 'mango', 'pineapple', 'banana'];
     this.flag = true;
+    this.birthday = new Date(1994, 10, 7);    // Nov 7, 1994
+    this.decide = ['users', 'fruits'];
+  
   }
 
 }

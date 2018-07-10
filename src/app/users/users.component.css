@@ -1,3 +1,7 @@
 /* .users_content {
     text-align: left;
 } */
+.date {
+    text-align: right;
+    color: orange;
+}

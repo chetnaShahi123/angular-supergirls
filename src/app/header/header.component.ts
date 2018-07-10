@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title : string ;
+  currency : number;
   constructor() { }
 
   ngOnInit() {
      this.title = "Supergirl's App";
+     this.currency = 9900;
   }
 
 }

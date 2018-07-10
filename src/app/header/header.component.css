@@ -5,3 +5,9 @@
 .supergirl_image {
     width : 36px;
 }
+.heading .curr {
+    text-align: right;
+    font-weight: normal;
+    color: orange;
+    padding-left: 34px;
+}

@@ -1,13 +1,35 @@
 <div class="users_content">
-  <h1>
+    <label class="date">{{birthday | date : "fullDate" | lowercase }}</label><br>
+    <label class="date">{{birthday | date : "dd/MM/yy" | uppercase }}</label>
+
+ <!-- <div class="row">
+      <div class="col">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Listing By</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" *ngFor = "let dec of decide">
+            <button class="dropdown-item">{{dec}}</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  
+
+    <input type="checkbox" [(ngModel)]="flag"> {{flag}}
+  <h1 *ngIf="flag==true; else fruits">
   Users
-</h1>
-<div *ngIf="flag == true; then truthyTemplate else falsyTemplate"></div>
+ </h1>
+ <ng-template #fruits>
+   <h1>
+      Fruits
+   </h1>
+ </ng-template>
+
+<div *ngIf="flag == true; then truthyTemplate else falsyTemplate" ></div>
 
 <ng-template #truthyTemplate>
 <ul [@listStagger] = "users">
   <li *ngFor="let user of users">
-    <a routerLink='/details/{{user.id}}'>{{user.name}}</a>
+    <a routerLink='/details/{{user.id}}'>{{user.name | uppercase}}</a>
 
     <ul>
       <li>{{user.email}}</li>

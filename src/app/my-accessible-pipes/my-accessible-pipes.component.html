@@ -1,0 +1,16 @@
+<div class="pipes">
+  <h2 class="heading"> A Numeric value representing the largest integer that is less than or equal to given value. </h2>
+  <p>getting a 1st demo: <label class="highlight">{{ 89 | demo1 }}</label> </p>
+</div>
+
+<div class="pipes">
+  <h2 class="heading">Power Booster ( static exponent of 2 by 10)</h2>
+  <p>Super power boost: <label class="highlight">{{2 | exponentialStrength: 10}}</label> </p>
+</div>
+
+<div class="pipes">
+  <h2 class="heading">Power Booster ( Dynamic)</h2>
+  <div> Normal power of superHero: <input [(ngModel)]="power"> </div>
+  <div>Boost factor of superhero : <input [(ngModel)] ="factor"></div><br>
+  <h3>Now, superHero power: <label class="highlight">{{power | exponentialStrength: factor }}</label> </h3>
+</div>  
