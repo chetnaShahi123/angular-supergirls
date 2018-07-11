@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-my-observables',
@@ -14,6 +15,7 @@ export class MyObservablesComponent implements OnInit {
 
   ngOnInit() {
     this.observableDemo1();
+    this.observableDemo2();
   }
 
   observableDemo1() {
@@ -39,6 +41,19 @@ export class MyObservablesComponent implements OnInit {
     setTimeout(function() {
       forUnsubscribeWork.unsubscribe();
     }, 8000 );       //unsubscribing after 8 seconds.
+  }
+
+  observableDemo2() {
+    const observableName = of(7,1,1,9,4,2,1,0,4);
+
+    let observer = {
+      next: (nextdata) => {console.log('observer got a next value:' + nextdata)},
+      error: err => console.error('Observer got an error: ' + err),
+      complete: () => console.log('Observer got a complete notification'),
+    };
+
+    //executing with observer object
+    observableName.subscribe( observer );
   }
 
 }
