@@ -1,11 +1,11 @@
-.heading {
+.main_heading {
     color : #0000ff;
     font-weight: bold;
 }
 .supergirl_image {
     width : 36px;
 }
-.heading .curr {
+.main_heading .curr {
     text-align: right;
     font-weight: normal;
     color: orange;
