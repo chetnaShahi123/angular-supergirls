@@ -2,7 +2,7 @@
 <nav>    
   <ul>
     <li>
-      <a routerLink = "" [class.activated]="currentUrl == '/' "  title="Home">
+      <a routerLink = "" [class.activated]="currentUrl == '/' || currentUrl == '/home' "  title="Home">
         <i class="material-icons">supervised_user_circle</i>
       </a>
     </li>
@@ -14,13 +14,13 @@
     </li>
 
     <li>
-      <a routerLink = "myAccessiblePipes" [class.activated]="currentUrl == '/myAccessiblePipes'" title="My accessible Pipes">
+      <a routerLink = "myAccessiblePipes" [class.activated]="currentUrl == '/myAccessiblePipes'" title="My Accessible Pipes">
         <i class="material-icons">accessibility new</i>
       </a>
     </li>
 
     <li>
-        <a routerLink = "myAccessibleDirectives" [class.activated]="currentUrl == '/myAccessibleDirectives'" title="My accessible Directive">
+        <a routerLink = "myAccessibleDirectives" [class.activated]="currentUrl == '/myAccessibleDirectives'" title="My Accessible Directive">
           <i class="material-icons">announcement</i>
         </a>
    </li>

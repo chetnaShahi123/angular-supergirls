@@ -10,7 +10,12 @@ import { MyObservablesComponent } from './my-observables/my-observables.componen
 
 const routes : Routes = [
   { path : '',
-    component : UsersComponent   
+    component : UsersComponent,  
+    children: [
+      {
+        path: 'home',
+        component: UsersComponent
+      }] 
   },
   {
     path : 'posts',
