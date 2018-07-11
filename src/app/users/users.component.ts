@@ -34,7 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';  //commented as havn't u
   ]
 })
 export class UsersComponent implements OnInit {
-  users : Object[];
+  users$ : Object[];    //Using the dollar sign in the name of a variable that is an observable, is considered best practice. This way it’s easy to identify if your variable is an observable or not.
   simplearr = [];
   flag : boolean;
   birthday : Date;
@@ -45,7 +45,7 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this.data.getUsers().subscribe(
-        data => this.users = data
+        data => this.users$ = data
     );
 
     this.simplearr = ['apple', 'mango', 'pineapple', 'banana'];

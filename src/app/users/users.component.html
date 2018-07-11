@@ -27,8 +27,8 @@
 <div *ngIf="flag == true; then truthyTemplate else falsyTemplate" ></div>
 
 <ng-template #truthyTemplate>
-<ul [@listStagger] = "users">
-  <li *ngFor="let user of users">
+<ul [@listStagger] = "users$">
+  <li *ngFor="let user of users$">
     <a routerLink='/details/{{user.id}}'>{{user.name | uppercase}}</a>
 
     <ul>
