@@ -33,7 +33,7 @@ export class MyObservablesComponent implements OnInit {
       complete: () => { console.log('completed'); }  // optional. indicates interaction with observable completes.
     } 
 
-    let forUnsubscribeWork = observableName.subscribe( observer );   // need to pass observer we created above while subscribing to observables. can be used inline also.
+    let forUnsubscribeWork = observableName.subscribe( observer );   // need to pass observer(we created above) while subscribing to observables. can be used inline also.
     //forUnsubscribeWork -> as unsubscribe method is returned along with observable
 
     setTimeout(function() {
